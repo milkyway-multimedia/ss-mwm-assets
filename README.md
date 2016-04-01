@@ -3,7 +3,7 @@ Assets (New Requirements Backend)
 
 Features
 --------
-* Access using: `singleton('require')
+* Access using: `singleton('require')`
 * You now have some sort of priority for your requirements
     - ->before
     - ->after
