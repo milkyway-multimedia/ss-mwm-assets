@@ -28,12 +28,12 @@ class RequirementsBackend extends Original
 
     public function clear($fileOrID = null) {
         parent::clear($fileOrID);
-        singleton('require')->clear_files($fileOrID);
+        singleton('require')->clearFiles($fileOrID);
     }
 
     public function restore() {
         parent::restore();
-        singleton('require')->restore_files();
+        singleton('require')->restoreFiles();
     }
 
     public function before($files = [], $before = '', $where = '')
