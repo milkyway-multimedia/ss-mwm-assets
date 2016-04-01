@@ -1,0 +1,9 @@
+{
+    "name":            "milkyway-multimedia/ss-mwm-flashmessage",
+    "version":         "0.1.0",
+    "private":         true,
+    "dependencies":    {},
+    "devDependencies": {
+        "assets": "git@bitbucket.org:milkyway-multimedia/mwm-common.git"
+    }
+}

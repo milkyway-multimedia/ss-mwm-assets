@@ -1,0 +1,6 @@
+---
+Name: mwm-assets--extensions
+---
+Controller:
+  extensions:
+    - 'Milkyway\SS\Assets\Extensions\Controller'

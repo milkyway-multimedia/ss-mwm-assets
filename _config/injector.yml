@@ -1,0 +1,6 @@
+---
+Name: mwm-assets--injector
+---
+Injector:
+  require:
+    class: 'Milkyway\SS\Assets\Requirements'
