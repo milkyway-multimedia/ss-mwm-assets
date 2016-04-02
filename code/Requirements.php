@@ -465,7 +465,7 @@ class Requirements extends Original implements \Flushable, \TemplateGlobalProvid
         return $contents;
     }
 
-    public function inlineFile($files, $theme = false)
+    public static function inlineFile($files, $theme = false)
     {
         if ($theme) {
             $theme = ($theme === true || $theme == 1) ? Config::inst()->get('SSViewer', 'theme') : $theme;
@@ -510,13 +510,13 @@ class Requirements extends Original implements \Flushable, \TemplateGlobalProvid
         return DBField::create_field('HTMLText', $contents);
     }
 
-    public function placeIMG($width = 400, $height = 300, $categories = 'any', $filters = '')
+    public static function placeIMG($width = 400, $height = 300, $categories = 'any', $filters = '')
     {
         return Controller::join_links(Director::protocol() . 'placeimg.com', $width, $height, $categories,
             $filters);
     }
 
-    public function loremIpsum($paragraphs = 1, $length = 'short', $opts = ['plaintext'])
+    public static function loremIpsum($paragraphs = 1, $length = 'short', $opts = ['plaintext'])
     {
         $key = preg_replace('/[^a-zA-Z0-9_]/', '', $paragraphs . '_' . $length . '_' . implode('_', $opts));
 
