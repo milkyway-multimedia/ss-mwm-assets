@@ -465,7 +465,7 @@ class Requirements extends Original implements \Flushable, \TemplateGlobalProvid
         return $contents;
     }
 
-    public static function inlineFile($files, $theme = false)
+    public static function inlineFile($files, $theme = false, $contentPostProcessCallback = null)
     {
         if ($theme) {
             $theme = ($theme === true || $theme == 1) ? Config::inst()->get('SSViewer', 'theme') : $theme;
@@ -505,6 +505,10 @@ class Requirements extends Original implements \Flushable, \TemplateGlobalProvid
                     }
                 }
             }
+        }
+
+        if (is_callable($contentPostProcessCallback)) {
+            $contents = call_user_func($contentPostProcessCallback, $contents);
         }
 
         return DBField::create_field('HTMLText', $contents);
